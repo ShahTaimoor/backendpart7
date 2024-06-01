@@ -19,11 +19,15 @@ const passUrl = url.parse(req.url, true)
 
 // ? About Route
 
- if(passUrl.pathname === '/about' && req.method === 'GET'){
+else if(passUrl.pathname === '/about' && req.method === 'GET'){
 
 // send response
     res.writeHead(200,{'contentType':'text/plain'})
     res.end('Welcome To The About Page')
+   }
+   else{
+     res.writeHead(200,{'contentType':'text/plain'})
+    res.end('Not Found')
    }
 
 
